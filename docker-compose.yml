@@ -1,0 +1,50 @@
+version: '3'
+ 
+services:
+  web:
+    build:
+      context: ./
+      dockerfile : ./docker/web/Dockerfile #Dockerfileが存在するディレクトリの相対パス
+    ports: #ポートを公開する(ホスト:コンテナ)
+      - '8082:8080' 
+    volumes: #コンテナと共有したいパスを指定
+      - ./logs:/usr/local/apache2/logs/httpd/ # コンテナに入らず、apacheのlogを見るためマウントしとく
+    depends_on: # Service同士の依存関係を指定
+      - ui #`docker-compose run`した際にapacheより前にuiコンテナが実行される
+    links: #他のコンテナに接続する(コンテナのhostsに追加される)
+      - ui
+  ui:
+    build: 
+      context: ./
+      dockerfile: ./docker/ui/Dockerfile
+    ports:
+      - '3002:3000'
+    volumes:
+        - ./ui:/usr/src/app
+    depends_on:
+      - api
+    links:
+      - api
+  api:
+    build:
+      context: ./
+      dockerfile: ./docker/api/Dockerfile
+    ports:
+      - '8005:8000'
+    volumes:
+      - ./api:/var/www/html
+    links:
+      - db
+  db:
+    image: mysql:8
+    volumes:
+      - ./mysql-volume:/var/lib/mysql
+      - ./docker/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./logs:/var/log/mysql
+    ports:
+      - "4308:3306"
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
