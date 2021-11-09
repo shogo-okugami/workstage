@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile : ./docker/web/Dockerfile #Dockerfileが存在するディレクトリの相対パス
     ports: #ポートを公開する(ホスト:コンテナ)
-      - '8082:8080' 
+      - '8082:80' 
     volumes: #コンテナと共有したいパスを指定
       - ./logs:/usr/local/apache2/logs/httpd/ # コンテナに入らず、apacheのlogを見るためマウントしとく
     depends_on: # Service同士の依存関係を指定
