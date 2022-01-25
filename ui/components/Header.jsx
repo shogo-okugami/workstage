@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" elevation={0} className={classes.root}>
+      <AppBar position="static" sx={{ boxShadow: 0 }} className={classes.root}>
         <Toolbar>
           <IconButton
             size="large"
@@ -80,7 +80,7 @@ const Header = () => {
           </div>
         </Toolbar>
       </AppBar>
-    </Box>
+    </Box >
   );
 }
 
