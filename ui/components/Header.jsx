@@ -74,8 +74,8 @@ const Header = () => {
               open={Boolean(anchorEl)}
               onClose={handleClose}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <MenuItem onClick={handleClose}>アカウント</MenuItem>
+              <MenuItem onClick={handleClose}>ログアウト</MenuItem>
             </Menu>
           </div>
         </Toolbar>
