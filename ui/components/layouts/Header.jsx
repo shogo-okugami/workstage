@@ -8,19 +8,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme) => (
-  {
-    root: {
-      backgroundColor: theme.palette.blue.main ,
-    },
-  }
-));
 
 const Header = () => {
-
-  const classes = useStyles()
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -34,8 +23,8 @@ const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ boxShadow: 0 }} className={classes.root}>
-        <Toolbar>
+      <AppBar position="static" sx={{ boxShadow: 0, bgcolor: 'blue.main', }} >
+        <Toolbar sx={{ pl: { md: 4, xl: 6 }, pr: { md: 4, xl: 6 } }}>
           <IconButton
             size="large"
             edge="start"
