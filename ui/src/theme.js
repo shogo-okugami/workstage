@@ -3,7 +3,7 @@ import { blue } from '@mui/material/colors'
 
 let theme = createTheme({
   palette: {
-    blue: {
+    primary: {
       main: blue[500],
     }
   },
