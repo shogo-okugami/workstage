@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" sx={{ boxShadow: 0, bgcolor: 'blue.main', }} >
+      <AppBar position="static" sx={{ boxShadow: 0, bgcolor: 'primary.main', }} >
         <Toolbar>
           <IconButton
             size="large"
