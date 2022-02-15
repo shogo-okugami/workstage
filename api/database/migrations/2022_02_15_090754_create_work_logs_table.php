@@ -15,6 +15,8 @@ class CreateWorkLogsTable extends Migration
     {
         Schema::create('work_logs', function (Blueprint $table) {
             $table->id();
+            $table->dateTime('start_at');
+            $table->dateTime('end_at');
             $table->timestamps();
         });
     }
