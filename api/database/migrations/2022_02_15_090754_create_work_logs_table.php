@@ -17,6 +17,7 @@ class CreateWorkLogsTable extends Migration
             $table->id();
             $table->dateTime('start_at');
             $table->dateTime('end_at');
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
