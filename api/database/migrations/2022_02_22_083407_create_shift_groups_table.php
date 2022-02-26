@@ -16,6 +16,7 @@ class CreateShiftGroupsTable extends Migration
         Schema::create('shift_groups', function (Blueprint $table) {
             $table->id();
             $table->date('on');
+            $table->boolean('is_draft')->default(false);
             $table->boolean('is_published')->default(false);
             $table->foreinId('company_id')->constrained();
             $table->timestamps();
