@@ -21,6 +21,8 @@ const Header = () => {
     setAnchorEl(null);
   };
 
+  const [open, setOpen] = React.useState(null);
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" sx={{ boxShadow: 0, bgcolor: 'primary.main', }} >
