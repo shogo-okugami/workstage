@@ -9,6 +9,10 @@ const Main = styled('main')(({ theme }) => ({
   padding: theme.spacing(3),
 }))
 
+const MainHeader = styled('div')(({ theme }) => ({
+  ...theme.mixins.toolbar,
+}))
+
 const Layout = ({ children }) => {
   return (
     <>
@@ -20,6 +24,7 @@ const Layout = ({ children }) => {
       <Box sx={{ display: 'flex' }}>
         <Header />
         <Main>
+          <MainHeader />
           {children}
         </Main>
       </Box>
