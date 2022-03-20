@@ -14,7 +14,7 @@ class AddCompanyIdToUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->bigIncrements('company_id')->after('user_id');
+            $table->unsignedBigInteger('company_id')->after('remember_token');
             $table->foreign('company_id')->references('id')->on('companies');
         });
     }
