@@ -18,7 +18,7 @@ class CreateShiftGroupsTable extends Migration
             $table->date('on');
             $table->boolean('is_draft')->default(false);
             $table->boolean('is_published')->default(false);
-            $table->foreinId('company_id')->constrained();
+            $table->foreignId('company_id')->constrained();
             $table->timestamps();
         });
     }
