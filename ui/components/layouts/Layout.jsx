@@ -25,7 +25,9 @@ const Layout = ({ children }) => {
         <Header />
         <Main>
           <MainHeader />
-          {children}
+          <Box sx={{ p:5}}>
+            {children}
+          </Box>
         </Main>
       </Box>
     </>
