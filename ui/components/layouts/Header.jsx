@@ -102,12 +102,12 @@ const Header = () => {
   };
 
   const items = [
-    { text: 'シフト', icon: <CalendarMonthIcon />, },
-    { text: '勤怠実績', icon: <WorkHistoryIcon />, },
-    { text: '打刻', icon: <AccessTimeIcon />, },
-    { text: 'メッセージ', icon: <MailIcon />, },
-    { text: 'メンバー', icon: <SupervisorAccountIcon />, },
-    { text: '設定', icon: <SettingsIcon />, },
+    { text: 'シフト', link: '/', icon: <CalendarMonthIcon />, },
+    { text: '勤怠実績', link: '/workhistory', icon: <WorkHistoryIcon />, },
+    { text: '打刻', link: '/stamping', icon: <AccessTimeIcon />, },
+    { text: 'メッセージ', link: '/messages', icon: <MailIcon />, },
+    { text: 'メンバー', link: '/members', icon: <SupervisorAccountIcon />, },
+    { text: '設定', link: '/settings', icon: <SettingsIcon />, },
   ];
 
   return (
