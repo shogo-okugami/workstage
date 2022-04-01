@@ -20,6 +20,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { useRouter } from 'next/router';
 import { styled, useTheme } from '@mui/material/styles';
 
 const drawerWidth = 240;
@@ -80,8 +81,9 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
-
 const Header = () => {
+
+  const router = useRouter();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -165,25 +167,26 @@ const Header = () => {
         <Divider />
         <List>
           {items.map((item) => (
-          <ListItemButton
-            key={item.text}
-            sx={{
-              minHeight: 48,
-              justifyContent: open ? 'initial' : 'center',
-              px: 2.5,
-            }}
-          >
-            <ListItemIcon
+            <ListItemButton
+              key={item.text}
               sx={{
-                minWidth: 0,
-                mr: open ? 3 : 'auto',
-                justifyContent: 'center',
+                minHeight: 48,
+                justifyContent: open ? 'initial' : 'center',
+                px: 2.5,
               }}
+              onClick={() => router.replace(item.link)}
             >
-              {item.icon}
-            </ListItemIcon>
-            <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 }} />
-          </ListItemButton>
+              <ListItemIcon
+                sx={{
+                  minWidth: 0,
+                  mr: open ? 3 : 'auto',
+                  justifyContent: 'center',
+                }}
+              >
+                {item.icon}
+              </ListItemIcon>
+              <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 }} />
+            </ListItemButton>
           ))}
         </List>
       </Drawer>
