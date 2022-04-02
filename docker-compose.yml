@@ -18,6 +18,7 @@ services:
       #他のコンテナに接続する(コンテナのhostsに追加される)
       - ui
   ui:
+    container_name: ui
     build:
       context: ./
       dockerfile: ./docker/ui/Dockerfile
