@@ -33,6 +33,7 @@ services:
     links:
       - api
   api:
+    container_name: api
     build:
       context: ./
       dockerfile: ./docker/api/Dockerfile
