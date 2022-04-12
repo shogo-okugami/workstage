@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Header from '@/components/layouts/Header';
 import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
-import { useRouter } from 'next/router';
 
 const Main = styled('main')(({ theme }) => ({
   flexGrow: 1,
@@ -15,31 +14,6 @@ const MainHeader = styled('div')(({ theme }) => ({
 }))
 
 const Layout = ({ children }) => {
-
-  const router = useRouter();
-
-  //titleタグに表示する文字
-  const title = (() => {
-
-    const firstRoute = router.pathname.split('/')[1]
-
-    switch (firstRoute) {
-      case '':
-        return 'シフト'
-      case 'workhistory':
-        return '勤怠実績'
-      case 'stamping':
-        return '打刻'
-      case 'messages':
-        return 'メッセージ'
-      case 'members':
-        return 'メンバー'
-      case 'settings':
-        return '設定'
-      default:
-        return ''
-    }
-  })()
 
   return (
     <>
