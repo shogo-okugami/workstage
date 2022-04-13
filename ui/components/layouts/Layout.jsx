@@ -13,7 +13,7 @@ const MainHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
 }))
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title }) => {
 
   return (
     <>
