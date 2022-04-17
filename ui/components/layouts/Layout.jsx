@@ -5,8 +5,11 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 const Main = styled('main')(({ theme }) => ({
+  top: 64,
   flexGrow: 1,
-  padding: theme.spacing(3),
+  padding: theme.spacing(8),
+  height: 'calc(100vh - 64px)',
+  position: 'relative',
 }))
 
 const MainHeader = styled('div')(({ theme }) => ({
