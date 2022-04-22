@@ -8,6 +8,13 @@ let theme = createTheme({
       secondary: blue[50],
     }
   },
+  components: {
+    MuiListItemButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
+    }
+  }
 })
 
 export default theme
