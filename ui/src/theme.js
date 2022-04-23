@@ -13,6 +13,13 @@ let theme = createTheme({
       defaultProps: {
         disableRipple: true,
       },
+      styleOverrides: {
+        root: {
+          '&.Mui-selected': {
+            background: blue[50],
+          }
+        }
+      }
     }
   }
 })
