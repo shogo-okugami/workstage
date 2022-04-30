@@ -166,28 +166,34 @@ const Header = () => {
         <DrawerHeader />
         <Divider />
         <List>
-          {items.map((item) => (
-            <ListItemButton
-              key={item.text}
-              sx={{
-                minHeight: 48,
-                justifyContent: open ? 'initial' : 'center',
-                px: 2.5,
-              }}
-              onClick={() => router.replace(item.link)}
-            >
-              <ListItemIcon
-                sx={{
-                  minWidth: 0,
-                  mr: open ? 3 : 'auto',
-                  justifyContent: 'center',
-                }}
-              >
-                {item.icon}
-              </ListItemIcon>
-              <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0 }} />
-            </ListItemButton>
-          ))}
+          {items.map(item => (
+            (() => {
+
+              const current = item.link === router.pathname.match(/\/[a-zA-z]*/)[0]
+
+              return (
+                <ListItemButton
+                  key={item.text}
+                  sx={{
+                    minHeight: 48,
+                    justifyContent: open ? 'initial' : 'center',
+                    px: 2.5,
+                  }}
+                  onClick={() => router.replace(item.link)}
+                  selected={current}
+                >
+                  <ListItemIcon
+                    sx={{
+                      minWidth: 0,
+                      mr: open ? 3 : 'auto',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {item.icon}
+                  </ListItemIcon>
+                  <ListItemText primary={item.text} sx={{ opacity: open ? 1 : 0, }} />
+                </ListItemButton>)
+            })()))}
         </List>
       </Drawer>
     </Box >
