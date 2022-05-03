@@ -12,10 +12,6 @@ const Main = styled('main')(({ theme }) => ({
   position: 'relative',
 }))
 
-const MainHeader = styled('div')(({ theme }) => ({
-  ...theme.mixins.toolbar,
-}))
-
 const Layout = ({ children, title }) => {
 
   const router = useRouter()
