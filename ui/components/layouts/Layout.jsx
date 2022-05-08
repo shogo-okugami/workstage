@@ -2,7 +2,10 @@ import * as React from 'react'
 import Head from 'next/head';
 import Header from '@/components/layouts/Header';
 import Box from '@mui/material/Box';
+import Loading from '@/components/ui/Loading';
 import { styled } from '@mui/material/styles';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 const Main = styled('main')(({ theme }) => ({
   top: 64,
@@ -41,10 +44,7 @@ const Layout = ({ children, title }) => {
       <Box sx={{ display: 'flex' }}>
         <Header />
         <Main>
-          <MainHeader />
-          <Box sx={{ p: 5 }}>
-            {children}
-          </Box>
+            {!pageLoading ? children : <Loading />}
         </Main>
       </Box>
     </>
