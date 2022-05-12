@@ -8,6 +8,9 @@ let theme = createTheme({
       secondary: blue[50],
     }
   },
+})
+
+theme = createTheme(theme, {
   components: {
     MuiListItemButton: {
       defaultProps: {
@@ -16,7 +19,13 @@ let theme = createTheme({
       styleOverrides: {
         root: {
           '&.Mui-selected': {
-            background: blue[50],
+            background: theme.palette.primary.secondary,
+            '&:hover': {
+              background: theme.palette.primary.secondary,
+            },
+            '& .MuiListItemIcon-root,.MuiListItemText-root': {
+              color: theme.palette.primary.main
+            },
           }
         }
       }
