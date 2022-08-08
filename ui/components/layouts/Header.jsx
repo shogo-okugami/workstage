@@ -95,8 +95,6 @@ const Header = () => {
     setAnchorEl(null);
   };
 
-  const theme = useTheme();
-
   const [open, setOpen] = React.useState(null);
 
   const handleDrawer = () => {
