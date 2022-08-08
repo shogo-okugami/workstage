@@ -1,22 +1,6 @@
 version: '3'
 
 services:
-  web:
-    build:
-      context: ./
-      dockerfile: ./docker/web/Dockerfile #Dockerfileが存在するディレクトリの相対パス
-    ports:
-      #ポートを公開する(ホスト:コンテナ)
-      - '8082:80'
-    volumes:
-      #コンテナと共有したいパスを指定
-      - ./logs:/usr/local/apache2/logs/httpd/ # コンテナに入らず、apacheのlogを見るためマウントしとく
-    depends_on:
-      # Service同士の依存関係を指定
-      - ui #`docker-compose run`した際にapacheより前にuiコンテナが実行される
-    links:
-      #他のコンテナに接続する(コンテナのhostsに追加される)
-      - ui
   ui:
     container_name: ui
     build:
