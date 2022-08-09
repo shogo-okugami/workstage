@@ -8,6 +8,11 @@ let theme = createTheme({
       secondary: blue[50],
     }
   },
+  typography:{
+    fontFamily:[
+      'Noto Sans JP'
+    ].join(','),
+  }
 })
 
 theme = createTheme(theme, {
