@@ -17,6 +17,21 @@ let theme = createTheme({
 
 theme = createTheme(theme, {
   components: {
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: theme.palette.primary.main,
+          [theme.breakpoints.up('md')]: {
+            paddingLeft: 32,
+            paddingRight: 32,
+          },
+          [theme.breakpoints.up('xl')]: {
+            paddingLeft: 45,
+            paddingRight: 45,
+          }
+        },
+      }
+    },
     MuiListItemButton: {
       defaultProps: {
         disableRipple: true,
@@ -34,7 +49,7 @@ theme = createTheme(theme, {
           }
         }
       }
-    }
+    },
   }
 })
 
