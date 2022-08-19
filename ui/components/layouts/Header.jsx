@@ -20,7 +20,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useRouter } from 'next/router';
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 
 const drawerWidth = 240;
 
