@@ -17,7 +17,6 @@ import ListItemText from '@mui/material/ListItemText';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import MailIcon from '@mui/icons-material/Mail';
 import SettingsIcon from '@mui/icons-material/Settings';
 import { useRouter } from 'next/router';
@@ -106,7 +105,6 @@ const Header = () => {
     { text: '勤怠実績', link: '/workhistory', icon: <WorkHistoryIcon />, },
     { text: '打刻', link: '/stamping', icon: <AccessTimeIcon />, },
     { text: 'メッセージ', link: '/messages', icon: <MailIcon />, },
-    { text: 'メンバー', link: '/members', icon: <SupervisorAccountIcon />, },
     { text: '設定', link: '/settings', icon: <SettingsIcon />, },
   ];
 
