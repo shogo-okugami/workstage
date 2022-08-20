@@ -21,6 +21,7 @@ theme = createTheme(theme, {
       styleOverrides: {
         root: {
           backgroundColor: theme.palette.primary.main,
+          justifyContent : 'space-between',
           [theme.breakpoints.up('md')]: {
             paddingLeft: 32,
             paddingRight: 32,
