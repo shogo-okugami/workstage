@@ -3,7 +3,6 @@ import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
@@ -110,7 +109,7 @@ const Header = () => {
 
   return (
     <Box>
-      <AppBar position="fixed" sx={{ boxShadow: 0, bgcolor: 'primary.main', }} >
+      <AppBar position="fixed" sx={{ boxShadow: 0, bgcolor: 'main', }} >
         <Toolbar>
           <IconButton
             color="inherit"
@@ -123,9 +122,6 @@ const Header = () => {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1, letterSpacing: 2, fontWeight: 'light', }}>
-            workstage
-          </Typography>
           <div>
             <IconButton
               size="large"
