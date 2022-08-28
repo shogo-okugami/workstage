@@ -21,6 +21,8 @@ services:
     build:
       context: ./
       dockerfile: ./docker/api/Dockerfile
+    ports:
+      - 8002:8000
     volumes:
       - ./api:/var/www/html
     links:
