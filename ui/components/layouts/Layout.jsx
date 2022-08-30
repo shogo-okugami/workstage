@@ -7,7 +7,7 @@ import { styled } from "@mui/material/styles";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-const Main = styled("main")(({ theme }) => ({
+const Main = styled("main")(({ theme, loading }) => ({
   top: 64,
   flexGrow: 1,
   padding: theme.spacing(5),
