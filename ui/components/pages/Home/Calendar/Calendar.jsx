@@ -48,7 +48,10 @@ const Calendar = () => {
                       id={day}
                       valign="top"
                     >
-                      <p>{showDate(day)}</p>
+                      <Day
+                        shiftDate={passDate({ year, month, day })}
+                        date={showDate(day)}
+                      />
                     </td>
                   ))}
                 </tr>
