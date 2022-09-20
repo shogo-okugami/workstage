@@ -40,6 +40,22 @@
   &:last-child {
     border-right: 0;
   }
+    & p {
+      text-align: center;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+    }
+    &.sm {
+      height: calc(100%/7);
+    }
+    &.md {
+      height: calc(100%/6);
+    }
+    &.lg {
+      height: calc(100%/5);
+    }
+  }
   &_days {
     &:first-child {
       & td {
