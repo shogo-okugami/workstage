@@ -36,10 +36,10 @@
     border-bottom: 0;
     border-left: 0;
     font-size: 12px;
-  }
-  &:last-child {
-    border-right: 0;
-  }
+    width :calc((100% - 65px)/7);
+    &:last-child {
+      border-right: 0;
+    }
     & p {
       text-align: center;
       left: 50%;
