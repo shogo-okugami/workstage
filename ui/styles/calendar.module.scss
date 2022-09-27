@@ -64,14 +64,4 @@
       }
     }
   }
-  &_day {
-    height: 200px;
-    position: relative;
-    & p {
-      text-align: center;
-      left: 50%;
-      transform: translateX(-50%);
-      position:absolute;
-    }
-  }
 }
