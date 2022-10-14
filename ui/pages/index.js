@@ -6,7 +6,7 @@ const Home = () => {
 };
 
 Home.getLayout = (page) => {
-  return <Layout title={"シフト"}>{page}</Layout>;
+  return <Layout title={"シフト"} maxHeight={"fixed"}>{page}</Layout>;
 };
 
 export default Home;
