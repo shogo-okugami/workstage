@@ -15,7 +15,7 @@ const Day = (props) => {
   const router = useRouter();
 
   const handleClick = () =>{
-    router.push(`/shift/${shiftDate}`);
+    router.push(`/${shiftDate}`);
   }
 
   return (
