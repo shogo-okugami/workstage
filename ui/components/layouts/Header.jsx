@@ -100,11 +100,11 @@ const Header = () => {
   };
 
   const items = [
-    { text: 'シフト', link: '/', icon: <CalendarMonthIcon />, },
-    { text: '勤怠実績', link: '/workhistory', icon: <WorkHistoryIcon />, },
-    { text: '打刻', link: '/stamping', icon: <AccessTimeIcon />, },
-    { text: 'メッセージ', link: '/messages', icon: <MailIcon />, },
-    { text: '設定', link: '/settings', icon: <SettingsIcon />, },
+    { text: 'シフト', link: '/', icon: <CalendarMonthIcon />, path: (router.query.date && `/${router.query.date}`) || '/',},
+    { text: '勤怠実績', link: '/workhistory', icon: <WorkHistoryIcon />, path: '/workhistory', },
+    { text: '打刻', link: '/stamping', icon: <AccessTimeIcon />, path: '/stamping', },
+    { text: 'メッセージ', link: '/messages', icon: <MailIcon />, path: '/messages', },
+    { text: '設定', link: '/settings', icon: <SettingsIcon />, path: '/settings', },
   ];
 
   return (
