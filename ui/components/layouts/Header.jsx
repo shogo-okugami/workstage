@@ -161,7 +161,7 @@ const Header = () => {
           {items.map(item => (
             (() => {
 
-              const current = item.link === router.pathname.match(/\/[a-zA-z]*/)[0]
+              const current = item.path === router.asPath
 
               return (
                 <ListItemButton
