@@ -10,7 +10,7 @@ let theme = createTheme({
     },
     neutral: {
       main: grey[600],
-    }
+    },
   },
   typography: {
     fontFamily: ["Noto Sans JP"].join(","),
@@ -19,6 +19,16 @@ let theme = createTheme({
 
 theme = createTheme(theme, {
   components: {
+    MuiButton: {
+      variants: [
+        {
+          props: { color: "neutral" },
+          style: {
+            color:theme.palette.text.primary,
+          },
+        },
+      ],
+    },
     MuiToolbar: {
       styleOverrides: {
         root: {
